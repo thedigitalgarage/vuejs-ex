@@ -409,7 +409,7 @@
             "name": "DATABASE_SERVICE_NAME",
             "displayName": "Database Service Name",
             "generate": "expression",
-            "from": "mongodb[A-Z0-9]{3}"
+            "from": "mongodb[a-z0-9]{3}"
         },
         {
             "name": "DATABASE_USER",

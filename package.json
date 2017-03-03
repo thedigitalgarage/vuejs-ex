@@ -1,0 +1,16 @@
+{
+  "name"         : "vue-hello-world",
+  "version"      : "0.0.1",
+  "description"  : "Hello World Example Application Vue.js for Digital Garage",
+  "main"         : "server.js",
+  "author"       : "John McCawley",
+  "dependencies" : {
+    "body-parser"    : "^1.4.3",
+    "express"        : "^4.13.4",
+    "mongoose"       : "^4.4.12",
+    "morgan"         : "^1.1.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

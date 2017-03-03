@@ -44,7 +44,7 @@
                         <input type="date" class="form-control" placeholder="Date" v-model="event.date">
                     </div>
 
-                    <button class="btn btn-primary" v-on="click: addEvent">Submit</button>
+                    <button class="btn btn-primary" v-on=click:"addEvent">Submit</button>
                 </div>
             </div>
         </div>
@@ -63,10 +63,10 @@
                       <i class="glyphicon glyphicon-calendar" v-if="event.date"></i>
                       {{ event.date }}
                     </h5>
-                    
+
                     <p class="list-group-item-text" v-if="event.description">{{ event.description }}</p>
 
-                    <button class="btn btn-xs btn-danger" v-on="click: deleteEvent($index)">Delete</button>
+                    <button class="btn btn-xs btn-danger" v-on=click:"deleteEvent($index)">Delete</button>
                 </a>
 
             </div>
@@ -80,7 +80,7 @@
 
     <!-- get vue.js -->
     <script src="https://unpkg.com/vue"></script>
-    <script src=" https://unpkg.com/vue-resource"></script>
+    <script src="https://unpkg.com/vue-resource"></script>
 
     <!-- get our module -->
     <script src="app.js"></script>

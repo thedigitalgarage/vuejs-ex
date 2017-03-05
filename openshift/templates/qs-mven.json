@@ -183,11 +183,11 @@
                                     },
                                     {
                                         "name": "MONGODB_USER",
-                                        "value": "${MONGODB_USER}"
+                                        "value": "${DATABASE_USER}"
                                     },
                                     {
                                         "name": "MONGODB_PASSWORD",
-                                        "value": "${MONGODB_PASSWORD}"
+                                        "value": "${DATABASE_PASSWORD}"
                                     },
                                     {
                                         "name": "MONGODB_DATABASE",
@@ -195,7 +195,7 @@
                                     },
                                     {
                                         "name": "MONGODB_ADMIN_PASSWORD",
-                                        "value": "${MONGODB_ADMIN_PASSWORD}"
+                                        "value": "${DATABASE_ADMIN_PASSWORD}"
                                     }
                                 ],
                                 "resources": {
@@ -287,11 +287,11 @@
                                 "env": [
                                     {
                                         "name": "MONGODB_USER",
-                                        "value": "${MONGODB_USER}"
+                                        "value": "${DATABASE_USER}"
                                     },
                                     {
                                         "name": "MONGODB_PASSWORD",
-                                        "value": "${MONGODB_PASSWORD}"
+                                        "value": "${DATABASE_PASSWORD}"
                                     },
                                     {
                                         "name": "MONGODB_DATABASE",
@@ -299,28 +299,9 @@
                                     },
                                     {
                                         "name": "MONGODB_ADMIN_PASSWORD",
-                                        "value": "${MONGODB_ADMIN_PASSWORD}"
+                                        "value": "${DATABASE_ADMIN_PASSWORD}"
                                     }
                                 ],
-                                "readinessProbe": {
-                                    "timeoutSeconds": 1,
-                                    "initialDelaySeconds": 3,
-                                    "exec": {
-                                        "command": [
-                                            "/bin/sh",
-                                            "-i",
-                                            "-c",
-                                            "mongo 127.0.0.1:27017/$MONGODB_DATABASE -u $MONGODB_USER -p $MONGODB_PASSWORD --eval=\"quit()\""
-                                        ]
-                                    }
-                                },
-                                "livenessProbe": {
-                                    "timeoutSeconds": 1,
-                                    "initialDelaySeconds": 30,
-                                    "tcpSocket": {
-                                        "port": 27017
-                                    }
-                                },
                                 "resources": {
                                     "limits": {
                                         "memory": "${MEMORY_MONGODB_LIMIT}"
